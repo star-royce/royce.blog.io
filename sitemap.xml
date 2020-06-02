@@ -1,0 +1,94 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>https://example.com/categories/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/categories/database/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/posts/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/tags/selflearning/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/tags/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/tags/tech/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/2020/06/db-lock/</loc>
+      
+      <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/about/</loc>
+      
+      <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+</urlset>
