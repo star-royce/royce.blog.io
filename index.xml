@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TODO on TODO</title>
-    <link>https://example.com/</link>
+    <link>https://star-royce.github.io/royce.blog.io/</link>
     <description>Recent content in TODO on TODO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -10,19 +10,19 @@
     
     <item>
       <title>Posts</title>
-      <link>https://example.com/posts/</link>
+      <link>https://star-royce.github.io/royce.blog.io/posts/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/</guid>
+      <guid>https://star-royce.github.io/royce.blog.io/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About Hugo</title>
-      <link>https://example.com/about/</link>
+      <link>https://star-royce.github.io/royce.blog.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>https://star-royce.github.io/royce.blog.io/about/</guid>
       <description>&lt;p&gt;Hugo is the &lt;strong&gt;world’s fastest framework for building websites&lt;/strong&gt;. It is written in Go.&lt;/p&gt;
 &lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
 &lt;ul&gt;
