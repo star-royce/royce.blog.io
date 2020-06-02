@@ -9,9 +9,9 @@
   
   
   
+  <link rel="prev" href="https://star-royce.github.io/royce.blog.io/2020/06/db-lock/" />
   
-  <link rel="next" href="https://star-royce.github.io/royce.blog.io/2020/06/hugo-github-combine/" />
-  <link rel="canonical" href="https://star-royce.github.io/royce.blog.io/2020/06/db-lock/" />
+  <link rel="canonical" href="https://star-royce.github.io/royce.blog.io/2020/06/hugo-github-combine/" />
   <link rel="apple-touch-icon" sizes="180x180" href="https://star-royce.github.io/royce.blog.io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://star-royce.github.io/royce.blog.io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://star-royce.github.io/royce.blog.io/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           数据库锁 | TODO
+           Hugo&#43;Github最佳实践 | TODO
        
   </title>
-  <meta name="title" content="数据库锁 | TODO">
+  <meta name="title" content="Hugo&#43;Github最佳实践 | TODO">
     
   
   <link rel="stylesheet" href="https://star-royce.github.io/royce.blog.io/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/star-royce.github.io\/royce.blog.io\/"
     },
     "articleSection" : "posts",
-    "name" : "数据库锁",
-    "headline" : "数据库锁",
-    "description" : "锁缺失的隐患 更新丢失：多个用户同时对一个数据资源进行更新，必定会产生被覆盖的数据，造成数据读写异常。 脏读：第一个事务读取第二个事务正在更新的",
+    "name" : "Hugo\u002bGithub最佳实践",
+    "headline" : "Hugo\u002bGithub最佳实践",
+    "description" : "不废话，跟着动起来。 GitHub Page 准备 github 账号注册登录 初始化一个仓库，用于承载未来的博客网站Html文件 使用 github page 功能",
     "inLanguage" : "zh-cn",
     "author" : "Royce.li",
     "creator" : "Royce.li",
@@ -56,9 +56,9 @@
     "copyrightYear" : "2020",
     "datePublished": "2020-06-02 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-06-02 00:00:00 \u002b0000 UTC",
-    "url" : "https:\/\/star-royce.github.io\/royce.blog.io\/2020\/06\/db-lock\/",
-    "wordCount" : "927",
-    "keywords" : [ "Tech","SelfLearning", "TODO"]
+    "url" : "https:\/\/star-royce.github.io\/royce.blog.io\/2020\/06\/hugo-github-combine\/",
+    "wordCount" : "52",
+    "keywords" : [ "Environment","Hugo", "TODO"]
 }
 </script>
 
@@ -116,7 +116,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">数据库锁</h1>
+        <h1 class="post-title" itemprop="name headline">Hugo&#43;Github最佳实践</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://star-royce.github.io/royce.blog.io/" rel="author">Royce.li</a>
                 <span class="post-time">
@@ -125,14 +125,14 @@
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="https://star-royce.github.io/royce.blog.io/categories/database/"> Database </a>
+                        <a href="https://star-royce.github.io/royce.blog.io/categories/environment/"> Environment </a>
                         
                 </span>
                 
                 <div class="post-meta">
                     <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span>
-                    <span class="post-date">共927字</span>，阅读约
-                    <span class="more-meta"> 2 分钟</span>
+                    <span class="post-date">共52字</span>，阅读约
+                    <span class="more-meta"> 1 分钟</span>
                 </div>
         </div>
     </header>
@@ -140,6 +140,8 @@
         
 
         
+            
+        
 
         
         
@@ -152,46 +154,14 @@
           
           
 
-          <h3 id="锁缺失的隐患">锁缺失的隐患</h3>
-<blockquote>
+          <p>不废话，跟着动起来。</p>
+<h2 id="github-page-准备">GitHub Page 准备</h2>
 <ol>
-<li>更新丢失：多个用户同时对一个数据资源进行更新，必定会产生被覆盖的数据，造成数据读写异常。</li>
+<li>github 账号注册登录</li>
+<li>初始化一个仓库，用于承载未来的博客网站Html文件
+<img src="https://star-royce.github.io/royce.blog.io/images/md/hugo/repostory_prepare.jpg" alt="avatar"></li>
+<li>使用 github page 功能</li>
 </ol>
-</blockquote>
-<ol start="2">
-<li>脏读：第一个事务读取第二个事务正在更新的数据表，如果第二个事务还没有更新完成，那么第一个事务读取的数据将是一半为更新过的，一半还没更新过的数据，这样的数据毫无意义。</li>
-<li>不可重复读：如果一个用户在一个事务中多次读取一条数据，而另外一个用户则同时更新了这条数据，造成第一个用户多次读取数据不一致。</li>
-<li>幻读：第一个事务读取一个结果集后，第二个事务，对这个结果集经行增删操作，然而第一个事务中再次对这个结果集进行查询时，数据发现丢失或新增</li>
-</ol>
-<h3 id="数据管理角度">数据管理角度</h3>
-<blockquote>
-<p>在数据库管理的角度或者数据行的角度来说，数据库锁可以分为共享锁和排它锁，这是面试过程中经常被提及的两种类型。本质其实很简单，站在数据的角度来看，如果数据当前正在被访问，下一个访问的请求该如何处理？和计算机二进制一样，无非就是允许被访问和不允许访问两种状态。</p>
-</blockquote>
-<ul>
-<li>共享锁</li>
-</ul>
-<blockquote>
-<p>共享锁被称为读锁或者S锁，就像以上所述，共享锁在新请求访问一个数据的时候，如果是读请求则允许，如果是写（删改）请求，则不允许。由于共享锁允许其他的读操作，所以通常情况下共享锁只应用于select操作，如果一个update或者delete操作应用共享锁会发生很严重的数据不一致情况。</p>
-</blockquote>
-<ul>
-<li>独占锁</li>
-</ul>
-<blockquote>
-<p>独占锁也被称为排它锁或者X锁，相对于共享锁，独占锁采用的态度比较坚决，一旦数据被独占锁锁定，其他任何请求（包括读操作）都必须等待独占锁的释放才可以继续，只有当前锁定数据的请求才可以修改读取数据</p>
-</blockquote>
-<ul>
-<li>更新锁</li>
-</ul>
-<blockquote>
-<p>当数据库准备更新数据时，它首先对数据对象作更新锁锁定，这样数据将不能被修改，但可以读取。等到确定要进行更新数据操作时，他会自动将更新锁换为独占锁，当对象上有其他锁存在时，无法对其加更新锁。</p>
-</blockquote>
-<ul>
-<li>意向锁</li>
-</ul>
-<blockquote>
-<p>简单来说就是给更大一级别的空间示意里面是否已经上过锁。例如表级放置了意向锁，就表示事务要对表的页或行上使用共享锁。在表的某一行上上放置意向锁，可以防止其它事务获取其它不兼容的的锁。意向锁可以提高性能，因为数据引擎不需要检测资源的每一列每一行，就能判断是否可以获取到该资源的兼容锁。意向锁包括三种类型：意向共享锁（IS），意向排他锁（IX），意向排他共享锁（SIX）。</p>
-</blockquote>
-<h3 id="乐观锁和悲观锁">乐观锁和悲观锁</h3>
 
     </div>
 
@@ -206,7 +176,7 @@
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://star-royce.github.io/royce.blog.io/2020/06/db-lock/>https://star-royce.github.io/royce.blog.io/2020/06/db-lock/</span>
+                    <a href=https://star-royce.github.io/royce.blog.io/2020/06/hugo-github-combine/>https://star-royce.github.io/royce.blog.io/2020/06/hugo-github-combine/</span>
             </p>
             
             
@@ -222,11 +192,11 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://star-royce.github.io/royce.blog.io/tags/tech/">
-                    #Tech</a></span>
+            <span class="tag"><a href="https://star-royce.github.io/royce.blog.io/tags/environment/">
+                    #Environment</a></span>
             
-            <span class="tag"><a href="https://star-royce.github.io/royce.blog.io/tags/selflearning/">
-                    #SelfLearning</a></span>
+            <span class="tag"><a href="https://star-royce.github.io/royce.blog.io/tags/hugo/">
+                    #Hugo</a></span>
             
             </section>
         
@@ -238,8 +208,8 @@
 
     <div class="post-nav">
         
+        <a href="https://star-royce.github.io/royce.blog.io/2020/06/db-lock/" class="prev" rel="prev" title="数据库锁"><i class="iconfont icon-left"></i>&nbsp;数据库锁</a>
         
-        <a href="https://star-royce.github.io/royce.blog.io/2020/06/hugo-github-combine/" class="next" rel="next" title="Hugo&#43;Github最佳实践">Hugo&#43;Github最佳实践&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -279,8 +249,9 @@
 
 
     
-    
-    <script src="https://star-royce.github.io/royce.blog.io/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="https://star-royce.github.io/royce.blog.io/js/vendor_gallery.min.js" async="" ></script>
     
   
 
