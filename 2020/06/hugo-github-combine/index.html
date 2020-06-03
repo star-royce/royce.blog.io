@@ -57,7 +57,7 @@
     "datePublished": "2020-06-02 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-06-02 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/star-royce.github.io\/royce.blog.io\/2020\/06\/hugo-github-combine\/",
-    "wordCount" : "2854",
+    "wordCount" : "2961",
     "keywords" : [ "Environment","Hugo", "TODO"]
 }
 </script>
@@ -131,7 +131,7 @@
                 
                 <div class="post-meta">
                     <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span>
-                    <span class="post-date">共2854字</span>，阅读约
+                    <span class="post-date">共2961字</span>，阅读约
                     <span class="more-meta"> 6 分钟</span>
                 </div>
         </div>
@@ -223,8 +223,8 @@
 <p>在源文件项目根目录下，创建子模块，用于单独管理打包后的html文件，将其推送到GitHub Page所在的远程仓库。</p>
 <ul>
 <li><code>git submodule add -b master &lt;xxx.io项目clone url&gt; public</code></li>
-<li><strong><!-- raw HTML omitted -->执行报错<!-- raw HTML omitted --></strong>, &ldquo;&lsquo;public&rsquo; already exists in the index&rdquo;, 可能是因为子模块有缓存，先删除缓存即可。使用git指令 <code>git rm --cached public</code></li>
-<li><strong><!-- raw HTML omitted -->执行报错<!-- raw HTML omitted --></strong>，&ldquo;A git directory for &lsquo;public&rsquo; is found locally with remote(s):&rdquo;, 是因为根目录项目已经关联过一次，需要删干净。需要在项目根目录下执行指令
+<li><strong><font color=red>执行报错</font></strong>, &ldquo;&lsquo;public&rsquo; already exists in the index&rdquo;, 可能是因为子模块有缓存，先删除缓存即可。使用git指令 <code>git rm --cached public</code></li>
+<li><strong><font color=red>执行报错</font></strong>，&ldquo;A git directory for &lsquo;public&rsquo; is found locally with remote(s):&rdquo;, 是因为根目录项目已经关联过一次，需要删干净。需要在项目根目录下执行指令
 <ul>
 <li><code>rm -rf .gitmodules</code>, 删除.gitmodules文件</li>
 <li><code>vim .git/config</code>, 删除 subModule配置
@@ -336,6 +336,23 @@ author = &quot;Royce.li&quot;
 <p>文章页脚license修改</p>
 <ul>
 <li>修改 &ldquo;config.toml&quot;中的 <code>license= 'xxxx'</code></li>
+</ul>
+</li>
+<li>
+<p>md内html语法支持</p>
+<ul>
+<li>
+<p>新版本的 Hugo （从 version 0.6）使用的 Markdown 渲染器从 blackfriday 改成了 goldmark，默认禁止在 Markdown 中使用 raw html 代码。需要的话得自己开启</p>
+</li>
+<li>
+<p>在&quot;config.toml&quot;中新增如下配置</p>
+<pre><code>[markup]
+defaultMarkdownHandler = &quot;goldmark&quot;
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
+</code></pre>
+</li>
 </ul>
 </li>
 </ol>
