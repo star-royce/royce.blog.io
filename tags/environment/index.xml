@@ -17,7 +17,7 @@
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://star-royce.github.io/royce.blog.io/2020/06/hugo-github-combine/</guid>
-      <description>白手起家 环境准备 1. Hugo下载安装 安装包方式: https://github.com/gohugoio/hugo/releases HomeBrew(仅Mac): brew install hugo Windows10安装, 参考文档: https://www.gohugo.org/doc/tutorials/installing-on-windows/ 下载得到zip文件 将</description>
+      <description>快捷方式 访问 https://github.com/star-royce/hugo-leaveIt-project 将项目clone到本地，根据README.md指引操作即可。 白手起家 环境准备 1. Hugo下载安装 安装包方式: https://github.com/gohugoio/hugo/releases HomeBrew(</description>
     </item>
     
   </channel>
