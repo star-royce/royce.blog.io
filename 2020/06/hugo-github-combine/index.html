@@ -57,7 +57,7 @@
     "datePublished": "2020-06-02 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-06-02 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/star-royce.github.io\/royce.blog.io\/2020\/06\/hugo-github-combine\/",
-    "wordCount" : "2961",
+    "wordCount" : "3096",
     "keywords" : [ "Environment","Hugo", "TODO"]
 }
 </script>
@@ -131,8 +131,8 @@
                 
                 <div class="post-meta">
                     <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span>
-                    <span class="post-date">共2961字</span>，阅读约
-                    <span class="more-meta"> 6 分钟</span>
+                    <span class="post-date">共3096字</span>，阅读约
+                    <span class="more-meta"> 7 分钟</span>
                 </div>
         </div>
     </header>
@@ -168,8 +168,14 @@
 <li>将&quot;D:\Hugo\Sites&quot;配置到环境变量中</li>
 </ul>
 </li>
+<li>Git Clone方式，参考文档 <a href="https://s0gohugo0io.icopy.site/getting-started/installing/">https://s0gohugo0io.icopy.site/getting-started/installing/</a></li>
 </ul>
-<h4 id="2-git下载安装">2. Git下载安装</h4>
+<pre><code>mkdir $HOME/src
+cd $HOME/src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended # 如果不想/不需要Sass / SCSS支持，请删除--tags extended
+</code></pre><h4 id="2-git下载安装">2. Git下载安装</h4>
 <ul>
 <li>参考官方文档: <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git</a></li>
 <li>HomeBrew安装(仅Mac): <code>brew install git</code></li>
@@ -355,9 +361,33 @@ defaultMarkdownHandler = &quot;goldmark&quot;
 </li>
 </ul>
 </li>
+<li>
+<p>字体选中样式</p>
+<ul>
+<li>
+<p>原效果字体选中为淡蓝色，不太显眼，参考文档后进行修改，改为深黑色效果.具体操作如下</p>
+</li>
+<li>
+<p>打开 <code>/themes/LeaveIt/assets/css/_common/_core/base.scss</code>, 搜索 <code>::selection</code>, 替换为</p>
+<pre><code>   ::selection {
+     background: #080808;
+   color: #FFFFFF;
+   }
+   ::-moz-selection {
+     background: #080808;
+     color: #FFFFFF;
+   }
+   ::-webkit-selection {
+     background: #080808;
+     color: #FFFFFF;
+   }
+</code></pre>
+</li>
+</ul>
+</li>
 </ol>
 <blockquote>
-<p>参考文档: <a href="https://juejin.im/post/5cc41bfef265da036505031c">https://juejin.im/post/5cc41bfef265da036505031c</a></p>
+<p>参考文档: <a href="https://huaien.co/technology/leaveit-theme-modified-log-5-selection/">https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</a></p>
 </blockquote>
 <h2 id="markdown-文件编辑">MarkDown 文件编辑</h2>
 <ul>
